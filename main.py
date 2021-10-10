@@ -1,8 +1,12 @@
-import requests, collections, bs4, psycopg2, re, array
+import collections, bs4, \
+     re, requests
 import seller
 from datetime import datetime
 import machine
 import pandas as pd
+
+from secret import client_ID
+
 
 def process_feedbacks(seller):
 
@@ -181,15 +185,15 @@ def fetch_sellers_from_db():
     sellers = cur.fetchall()
     return sellers
 
-fake_seller = False
-database_integration_enabled = True
+fake_seller = True
+database_integration_enabled = False
 
 if fake_seller:
     s = seller.Seller(43854717, 'fake seller', None, None, None, None, None )#    instantiate seller
-    process_feedbacks(s)
-    exit()
+    #process_feedbacks(s)
+    #exit()
 if database_integration_enabled:
-    sellers = fetch_sellers_from_db()
+    #sellers = fetch_sellers_from_db()
     auctioners_seniority = []
     auctioners_feedbacks_count = []
     #data = array.array('i', [])
@@ -220,11 +224,7 @@ if database_integration_enabled:
 
     predictions = machine.full_machine(df_train_auctioners, df_train_target, df_test_auctioners)
     print('predictions: ' + str(predictions))
-else:
-    auctions = process_auctions('http://allegro.pl/apple-iphone-7-plus-256095?offerTypeBuyNow=1&buyNew=1&p=1')
-    auctioners = extract_auctioners_from_auctions(auctions)
-    auctioners = enrich_auctioners_data(auctioners)
-    for a in auctioners:
-        persist_seller_to_database(a)
 
 
+
+print ('klient test: ', client_ID)
