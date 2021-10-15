@@ -16,6 +16,7 @@ def process_feedbacks(seller):
     print(url)
     res = requests.get(url)
     whole_page = bs4.BeautifulSoup(res.text)
+    print(whole_page)
     seniority_date = whole_page.find(text=re.compile(r'Użytkownik od:'))
     seniority_date = seniority_date[15:]
     seniority_datetime = datetime.strptime(seniority_date, '%d.%m.%Y, %H:%M:%S')
@@ -190,7 +191,7 @@ database_integration_enabled = False
 
 if fake_seller:
     s = seller.Seller(43854717, 'fake seller', None, None, None, None, None )#    instantiate seller
-    #process_feedbacks(s)
+    process_feedbacks(s)
     #exit()
 if database_integration_enabled:
     #sellers = fetch_sellers_from_db()
