@@ -1,0 +1,8 @@
+seller_id, seller_name, seniority, no_of_feedbacks, last_logged, feedbacks_diversity, positive_feed_cost
+1,test seller 1,2,123,345,20,100
+2,test seller 2,2,14,47,13,230
+3,test seller 3,3,0,62,0,10
+4,test seller 4,5,5,12,27,50
+5,test seller 5,5,4,1,22,1
+6,test seller 6,6,2323,1,14,10
+7,test seller 7,1,678,30,0,45

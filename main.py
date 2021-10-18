@@ -187,44 +187,53 @@ def fetch_sellers_from_db():
     return sellers
 
 fake_seller = True
-database_integration_enabled = False
+
 
 if fake_seller:
     s = seller.Seller(43854717, 'fake seller', None, None, None, None, None )#    instantiate seller
-    process_feedbacks(s)
+    sellers = []
+    #sellers.append(str(s))
+    print("Fake seller is: ",s)
+    #process_feedbacks(s)
     #exit()
-if database_integration_enabled:
+
     #sellers = fetch_sellers_from_db()
-    auctioners_seniority = []
-    auctioners_feedbacks_count = []
+auctioners_seniority = []
+auctioners_feedbacks_count = []
     #data = array.array('i', [])
-    for s in sellers:
-        auctioners_seniority.append(((datetime.now().date()) - s[1]).days)
-        auctioners_feedbacks_count.append(s[2])
+for s in sellers:
+    auctioners_seniority.append(((datetime.now().date()) - s[1]).days)
+    auctioners_feedbacks_count.append(s[2])
 
-    df_train_auctioners = pd.DataFrame(
-        {'seniority': auctioners_seniority[:5],
-         'feedbacks_count': auctioners_feedbacks_count[:5]
-         })
+# tu są testy
+df_train_example = pd.read_csv('train.csv', delimiter=',', dtype=str)
+print ('df_train_example:',df_train_example)
+df_test_example = pd.read_csv('test.csv', delimiter=',', dtype=str)
 
-    train_target = [1,1,1,0,0]
-    print('train target: ' + str(train_target))
+train_example_target = [1,1,1,0,0]
+df_train_example_target = pd.DataFrame(data=train_example_target)
 
-    df_test_auctioners = pd.DataFrame(
-        {'seniority': auctioners_seniority[5:10],
-         'feedbacks_count': auctioners_feedbacks_count[5:10]
-         })
 
-    df_train_target = pd.DataFrame(data=train_target)
-    print("df_train_target: " + str(df_train_target))
+train_target = [1,1,1,0,0]
+print('train target: ' + str(train_target))
 
-    #df_train_auctioners = pd.DataFrame(data=train_auctioners)
-    print("df_train_auctioners: " + str(df_train_auctioners))
 
-    print('df_test_autcioners' + str(df_test_auctioners))
+df_train_auctioners = pd.DataFrame(
+    {'seniority': auctioners_seniority[:5], 'feedbacks_count': auctioners_feedbacks_count[:5] })
+df_test_auctioners = pd.DataFrame(
+    {'seniority': auctioners_seniority[5:10],     'feedbacks_count': auctioners_feedbacks_count[5:10]    })
+df_train_target = pd.DataFrame(data=train_target)
 
-    predictions = machine.full_machine(df_train_auctioners, df_train_target, df_test_auctioners)
-    print('predictions: ' + str(predictions))
+print("df_train_target: " + str(df_train_target))
+
+#df_train_auctioners = pd.DataFrame(data=train_auctioners)
+print("df_train_auctioners: " + str(df_train_auctioners))
+
+print('df_test_autcioners' + str(df_test_auctioners))
+
+#predictions = machine.full_machine(df_train_auctioners, df_train_target, df_test_auctioners)
+predictions = machine.full_machine(df_train_example, df_train_example_target, df_test_example)
+print('predictions: ' + str(predictions))
 
 
 

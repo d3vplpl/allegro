@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 
+# the following implementation is based on a book 'real-world-machine-learning-1st-henrik-brink'
+
 def full_machine(train_features, train_target, test_features):
 
     from sklearn.linear_model import LogisticRegression as Model
@@ -27,7 +29,6 @@ def full_machine(train_features, train_target, test_features):
     def predict(model, new_features):
         preds = model.predict(new_features)
         return preds
-
 
     model = train(train_features, train_target)
     predictions = predict(model, test_features)
