@@ -193,7 +193,7 @@ if fake_seller:
     s = seller.Seller(43854717, 'fake seller', None, None, None, None, None )#    instantiate seller
     sellers = []
     #sellers.append(str(s))
-    print("Fake seller is: ",s)
+    #print("Fake seller is: ", s)
     #process_feedbacks(s)
     #exit()
 
@@ -205,36 +205,36 @@ for s in sellers:
     auctioners_seniority.append(((datetime.now().date()) - s[1]).days)
     auctioners_feedbacks_count.append(s[2])
 
-# tu są testy
-df_train_example = pd.read_csv('train.csv', delimiter=',', dtype=str)
-print ('df_train_example:',df_train_example)
-df_test_example = pd.read_csv('test.csv', delimiter=',', dtype=str)
+# tu są przykłady
+df_train_example = pd.read_csv('train1.csv', delimiter=',', dtype=str)
+df_train_example.drop('seller_id', axis=1,inplace=True)
+print('df_train_example:', df_train_example)
+df_test_example = pd.read_csv('test1.csv', delimiter=',', dtype=str)
+df_test_example.drop('seller_id', axis=1, inplace=True)
 
-train_example_target = [1,1,1,0,0]
+train_example_target = [1, 1, 1, 0, 0, 1, 1]
 df_train_example_target = pd.DataFrame(data=train_example_target)
 
 
-train_target = [1,1,1,0,0]
-print('train target: ' + str(train_target))
+train_target = [1, 1, 1, 0, 0, 1, 0]
+#print('train target: ' + str(train_target))
 
 
 df_train_auctioners = pd.DataFrame(
-    {'seniority': auctioners_seniority[:5], 'feedbacks_count': auctioners_feedbacks_count[:5] })
+    {'seniority': auctioners_seniority[:5], 'feedbacks_count': auctioners_feedbacks_count[:5]})
 df_test_auctioners = pd.DataFrame(
-    {'seniority': auctioners_seniority[5:10],     'feedbacks_count': auctioners_feedbacks_count[5:10]    })
+    {'seniority': auctioners_seniority[5:10], 'feedbacks_count': auctioners_feedbacks_count[5:10]})
 df_train_target = pd.DataFrame(data=train_target)
 
-print("df_train_target: " + str(df_train_target))
+#print("df_train_target: " + str(df_train_target))
 
 #df_train_auctioners = pd.DataFrame(data=train_auctioners)
-print("df_train_auctioners: " + str(df_train_auctioners))
+#print("df_train_auctioners: " + str(df_train_auctioners))
 
-print('df_test_autcioners' + str(df_test_auctioners))
+#print('df_test_auctioners' + str(df_test_auctioners))
 
 #predictions = machine.full_machine(df_train_auctioners, df_train_target, df_test_auctioners)
 predictions = machine.full_machine(df_train_example, df_train_example_target, df_test_example)
 print('predictions: ' + str(predictions))
-
-
 
 print ('klient test: ', client_ID)
