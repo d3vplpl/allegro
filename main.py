@@ -212,7 +212,7 @@ print('df_train_example:', df_train_example)
 df_test_example = pd.read_csv('test1.csv', delimiter=',', dtype=str)
 df_test_example.drop('seller_id', axis=1, inplace=True)
 
-train_example_target = [1, 1, 1, 0, 0, 1, 1]
+train_example_target = [1, 1, 0, 1, 0, 1, 1]
 df_train_example_target = pd.DataFrame(data=train_example_target)
 
 
