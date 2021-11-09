@@ -19,10 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="58c16183-a0c7-4910-a7bd-1d2ebb3f11d9" name="Default" comment="next">
+    <list default="true" id="58c16183-a0c7-4910-a7bd-1d2ebb3f11d9" name="Default" comment="działający przykład z wieloma featurami typowymi dla sellerów allegro">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/test1.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/train1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/train1.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634459718121</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="działający przykład z wieloma featurami typowymi dla sellerów allegro">
+      <created>1635164327378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1635164327378</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,7 +200,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Działający call do sandbox" />
     <MESSAGE value="next" />
-    <option name="LAST_COMMIT_MESSAGE" value="next" />
+    <MESSAGE value="działający przykład z wieloma featurami typowymi dla sellerów allegro" />
+    <option name="LAST_COMMIT_MESSAGE" value="działający przykład z wieloma featurami typowymi dla sellerów allegro" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="198" key="#Inspections" timestamp="1634456123446">
@@ -209,30 +216,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1154" y="199" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1633549747448" />
-    <state width="1899" height="394" key="GridCell.Tab.0.bottom" timestamp="1634736173158">
+    <state width="1899" height="394" key="GridCell.Tab.0.bottom" timestamp="1635427421821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="394" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1634736173158" />
-    <state width="1899" height="394" key="GridCell.Tab.0.center" timestamp="1634736173158">
+    <state width="1899" height="394" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1635427421821" />
+    <state width="1899" height="394" key="GridCell.Tab.0.center" timestamp="1635427421821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="394" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1634736173158" />
-    <state width="1899" height="394" key="GridCell.Tab.0.left" timestamp="1634736173158">
+    <state width="1899" height="394" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1635427421821" />
+    <state width="1899" height="394" key="GridCell.Tab.0.left" timestamp="1635427421821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="394" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1634736173158" />
-    <state width="1899" height="394" key="GridCell.Tab.0.right" timestamp="1634736173158">
+    <state width="1899" height="394" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1635427421821" />
+    <state width="1899" height="394" key="GridCell.Tab.0.right" timestamp="1635427421821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="394" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1634736173158" />
+    <state width="1899" height="394" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1635427421821" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1634456649071">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1634456649071" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1634459725101">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1635167706381">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1634459725101" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1635167706381" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

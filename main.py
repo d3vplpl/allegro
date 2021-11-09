@@ -238,3 +238,6 @@ predictions = machine.full_machine(df_train_example, df_train_example_target, df
 print('predictions: ' + str(predictions))
 
 print ('klient test: ', client_ID)
+
+test_seller = seller.Seller(23, 'piotrm', None, None, None, None, None )#    instantiate seller
+process_feedbacks(test_seller)
